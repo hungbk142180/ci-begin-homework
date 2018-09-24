@@ -14,8 +14,9 @@ public class BackGround extends GameObject {
 
     @Override
     public void run() {
+        // Ý tưởng: thêm điều kiện chỉ chạy khi tọa độ y >= (height của ảnh background - height của cửa sổ phần mềm windows)
         if (this.y >= -image.getHeight() + 600) {
-            this.y -=50;
+            this.y -=1;
         }
     }
 

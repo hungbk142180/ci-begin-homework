@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2701edb7-6b3d-461d-a128-a4bebab19870" name="Default" comment="First commmit">
+    <list default="true" id="2701edb7-6b3d-461d-a128-a4bebab19870" name="Default" comment="1. Thêm nút điều khiển cho Player di chuyển bằng 4 phím (W,A,S,D).&#10;2. Giới hạn bachground: dừng lại khi đáy background chạm đáy màn hình.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/BackGround.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/BackGround.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,13 +25,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3065" />
+          <entry key="java" value="3071" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3065" />
+          <entry key="JAVA" value="3071" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
@@ -75,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/base/BackGround.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -231,7 +230,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537780439270" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537780568224" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -378,7 +377,7 @@
       <workItem from="1537705381303" duration="10531000" />
       <workItem from="1537755527356" duration="722000" />
       <workItem from="1537775414753" duration="521000" />
-      <workItem from="1537777479780" duration="2474000" />
+      <workItem from="1537777479780" duration="2721000" />
     </task>
     <task id="LOCAL-00001" summary="First commmit">
       <created>1537755794145</created>
@@ -387,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537755794145</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1. Thêm nút điều khiển cho Player di chuyển bằng 4 phím (W,A,S,D).&#10;2. Giới hạn bachground: dừng lại khi đáy background chạm đáy màn hình.">
+      <created>1537780471988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537780471988</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14248000" />
+    <option name="totallyTimeSpent" value="14495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -438,7 +444,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commmit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commmit" />
+    <MESSAGE value="1. Thêm nút điều khiển cho Player di chuyển bằng 4 phím (W,A,S,D).&#10;2. Giới hạn bachground: dừng lại khi đáy background chạm đáy màn hình." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Thêm nút điều khiển cho Player di chuyển bằng 4 phím (W,A,S,D).&#10;2. Giới hạn bachground: dừng lại khi đáy background chạm đáy màn hình." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -523,7 +530,7 @@
     <entry file="file://$PROJECT_DIR$/src/base/BackGround.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
