@@ -1,18 +1,22 @@
+package game;
+
 import base.KeyEventPress;
-import tklibs.SpriteUtils;
+import base.Settings;
+import game.GameCanvas;
+//import tklibs.SpriteUtils;
 
 import javax.swing.*;
-import java.awt.*;
+//import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
+//import java.awt.image.BufferedImage;
 
 public class GameWindow extends JFrame {
     GameCanvas canvas;
 
     public GameWindow() {
         //setup
-        this.setSize(800, 600);
+        this.setSize(Settings.SCREEN_WITDH, Settings.SCREEN_HEIGHT);
         this.setResizable(true);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setupEvenListenner();
@@ -65,7 +69,7 @@ public class GameWindow extends JFrame {
         });
     }
 
-    void gameLoop() {
+    public void gameLoop() {
         long delay = 1000/60;
         long lastTime = 0;
         while (true) {

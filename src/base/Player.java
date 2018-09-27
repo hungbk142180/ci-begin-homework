@@ -1,15 +1,26 @@
 package base;
-
+import game.GameCanvas;
 import tklibs.SpriteUtils;
-
 import java.awt.image.BufferedImage;
+
+import base.renderer.AnimationRenderer;
+import base.renderer.SingleImageRenderer;
+
+import java.util.ArrayList;
 
 public class Player extends GameObject {
     public Player() {
-        BufferedImage image = SpriteUtils.loadImage("assets/images/players/straight/0.png");
-        this.image = image;
-        this.x = 200;
-        this.y = 300;
+        ArrayList<BufferedImage> images = new ArrayList<>();
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/0.png"));
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/1.png"));
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/2.png"));
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/3.png"));
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/4.png"));
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/5.png"));
+        images.add(SpriteUtils.loadImage("assets/images/players/straight/6.png"));
+
+        this.renderer = new AnimationRenderer(images);
+        this.position = new Vector2D(Settings.START_PLAYER_POSITION_X, Settings.START_PLAYER_POSITION_Y);
     }
 
     @Override
@@ -31,8 +42,13 @@ public class Player extends GameObject {
         }
     }
 
+    void shoot() {
+        //...
+        PlayerBullet bullet = new PlayerBullet();
+        GameCanvas.playerBullets.add(bullet);
+    }
+
     public void move(int translateX, int translateY) {
-        this.x = this.x + translateX;
-        this.y = this.y + translateY;
+        this.position.addThis(translateX, translateY);
     }
 }
