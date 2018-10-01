@@ -1,9 +1,7 @@
 package base.renderer;
-
 import base.GameObject;
 import base.renderer.Renderer;
 import tklibs.SpriteUtils;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
