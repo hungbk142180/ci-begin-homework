@@ -1,5 +1,6 @@
 package game;
 
+import base.GameObject;
 import base.KeyEventPress;
 import base.Settings;
 import game.GameCanvas;
@@ -34,17 +35,17 @@ public class GameWindow extends JFrame {
                 if(e.getKeyCode() == KeyEvent.VK_W) {
                     KeyEventPress.isUpPress = true;
                 }
-
                 if(e.getKeyCode() == KeyEvent.VK_S) {
                     KeyEventPress.isDownPress = true;
                 }
-
                 if(e.getKeyCode() == KeyEvent.VK_A) {
                     KeyEventPress.isLeftPress = true;
                 }
-
                 if(e.getKeyCode() == KeyEvent.VK_D) {
                     KeyEventPress.isRightPress = true;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    KeyEventPress.isFirePress = true;
                 }
             }
 
@@ -53,17 +54,17 @@ public class GameWindow extends JFrame {
                 if(e.getKeyCode() == KeyEvent.VK_W) {
                     KeyEventPress.isUpPress = false;
                 }
-
                 if(e.getKeyCode() == KeyEvent.VK_S) {
                     KeyEventPress.isDownPress = false;
                 }
-
                 if(e.getKeyCode() == KeyEvent.VK_A) {
                     KeyEventPress.isLeftPress = false;
                 }
-
                 if(e.getKeyCode() == KeyEvent.VK_D) {
                     KeyEventPress.isRightPress = false;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    KeyEventPress.isFirePress = false;
                 }
             }
         });
@@ -75,8 +76,9 @@ public class GameWindow extends JFrame {
         while (true) {
             long currentTime = System.currentTimeMillis();
             if(currentTime - lastTime > delay) {
-                canvas.run();
-                this.repaint();
+                canvas.run(); //runAll()
+                this.repaint(); //renderAll()
+                //JFrame.repaint()
                 lastTime = currentTime;
             }
         }
