@@ -9,7 +9,6 @@ public class Program {
 //        double x2 ;
 //        String x3 ; // String ko phai kieu bien nguyen thuy, String la mot doi tuong
 //        t1.print();
-//        t2.print();
         GameWindow gameWindow = new GameWindow();
         gameWindow.gameLoop();
 //        gameWindow.setVisible(true);
