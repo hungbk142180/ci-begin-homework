@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 public class BackGround extends GameObject {
     public BackGround() {
+        super();
         // Vẫn cần load image vì có sử dụng thuộc tính getHeight của image.
         BufferedImage image = SpriteUtils.loadImage("assets/images/background/0.png");
 //        this.image = image;

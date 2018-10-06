@@ -13,6 +13,7 @@ public class Player extends GameObject {
 //    boolean isValidFire;
     FrameCounter fireCounter;
     public Player() {
+        super();
 //        ArrayList<BufferedImage> images = new ArrayList<>();
 //        images.add(SpriteUtils.loadImage("assets/images/players/straight/0.png"));
 //        images.add(SpriteUtils.loadImage("assets/images/players/straight/1.png"));
@@ -64,9 +65,17 @@ public class Player extends GameObject {
 //        if (this.fireCounter.run()) {
 //        PlayerBullet bullet = new PlayerBullet();
 //        GameCanvas.playerBullets.add(bullet);
-        PlayerBullet bullet = GameObject.create(PlayerBullet.class);
+        PlayerBullet bullet1 = GameObject.recyle(PlayerBullet.class);
+        PlayerBullet bullet2 = GameObject.recyle(PlayerBullet.class);
+        PlayerBullet bullet3 = GameObject.recyle(PlayerBullet.class);
 
-        bullet.position.set(this.position.x, this.position.y);
+        bullet1.velocity.set(0, -1);
+        bullet2.velocity.set(-1, -1);
+        bullet3.velocity.set(1, -1);
+
+        bullet1.position.set(this.position.x, this.position.y);
+        bullet2.position.set(this.position.x, this.position.y);
+        bullet3.position.set(this.position.x, this.position.y);
 
         this.fireCounter.reset();
 //        }

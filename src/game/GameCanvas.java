@@ -16,12 +16,11 @@ public class GameCanvas extends JPanel {
 
     public GameCanvas() {
         //Khởi tạo các game object
-        this.background = GameObject.create(BackGround.class);
-        this.player = GameObject.create(Player.class);
+        this.background = GameObject.recyle(BackGround.class);
+        this.player = GameObject.recyle(Player.class);
 //        enemies = new ArrayList<>();
+        Enemy enemy = GameObject.recyle(Enemy.class);
 //        playerBullets = new ArrayList<>();
-
-        Enemy enemy = GameObject.create(Enemy.class);
     }
 
     public void run() {
