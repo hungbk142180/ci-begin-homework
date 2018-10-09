@@ -86,7 +86,9 @@ public class Enemy extends GameObject implements Physics {
     }
 
     public void move() {
-        this.position.addThis(-2, 0);
+        if (this.position.x >= 0) {
+            this.position.addThis(-2, 0);
+        }
     }
 
     @Override
