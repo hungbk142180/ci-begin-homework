@@ -1,5 +1,6 @@
 package base.enemy;
 
+import base.counter.FrameCounter;
 import base.physics.BoxCollider;
 import base.GameObject;
 import base.physics.Physics;
@@ -19,6 +20,7 @@ public class Enemy extends GameObject implements Physics {
 //    FrameCounter fireCounter;
     Action actionFire;
     Action actionMove;
+    FrameCounter moveCounter;
     public Enemy() {
         super();
         ArrayList<BufferedImage> images = SpriteUtils.loadImages(
@@ -28,13 +30,14 @@ public class Enemy extends GameObject implements Physics {
                 "assets/images/enemies/level0/pink/3.png"
         );
         this.renderer = new AnimationRenderer(images);
-        this.position = new Vector2D(200,100);
+        this.position = new Vector2D();
         this.collider = new BoxCollider(28,28);
+        this.moveCounter = new FrameCounter(60);
 //        this.fireCounter = new FrameCounter(20);
         this.defineAction();
     }
 
-    void defineAction() {
+    public void defineAction() {
         ActionWait actionWait = new ActionWait(20);
         Action actionFire = new Action() {
             @Override
@@ -86,8 +89,14 @@ public class Enemy extends GameObject implements Physics {
     }
 
     public void move() {
-        if (this.position.x >= 0) {
-            this.position.addThis(-2, 0);
+        boolean moveCounterRun = moveCounter.run();
+        if(moveCounterRun == false) {
+            this.position.addThis(-5, 0);
+        } else {
+            this.position.addThis(5, 0);
+        }
+        if (this.position.x >= 358) {
+            this.moveCounter.reset();
         }
     }
 

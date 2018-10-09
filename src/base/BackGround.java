@@ -20,7 +20,7 @@ public class BackGround extends GameObject {
         if (this.position.y >= 0) {
             return;
         } else {
-            this.position.y += 10 /*SPEED*/;
+            this.position.y += 2 /*SPEED*/;
         }
     }
 

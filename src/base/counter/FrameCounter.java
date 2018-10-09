@@ -17,6 +17,19 @@ public class FrameCounter {
         }
     }
 
+//    public boolean run(int resetPoint) {
+//        if(frameCount >= maxCount && frameCount <= resetPoint) {
+//            frameCount++;
+//            return true;
+//        } else if(frameCount < maxCount) {
+//            frameCount ++;
+//            return false;
+//        } else {
+//            reset();
+//            return true;
+//        }
+//    }
+
     public void reset() {
         this.frameCount = 0;
     }

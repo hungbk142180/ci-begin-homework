@@ -39,7 +39,7 @@ public class Player extends GameObject implements Physics {
         this.renderer = new AnimationRenderer(images);
         this.position = new Vector2D(Settings.START_PLAYER_POSITION_X, Settings.START_PLAYER_POSITION_Y);
 //        isValidFire = true;
-        this.fireCounter = new FrameCounter(10);
+        this.fireCounter = new FrameCounter(20);
         this.collider = new BoxCollider(32,48);
         this.hp = 20;
     }
@@ -59,8 +59,8 @@ public class Player extends GameObject implements Physics {
             this.move(1, 0);
         }
         //fire
-        boolean fireCounteRun = this.fireCounter.run();
-        if(KeyEventPress.isFirePress && fireCounteRun) {
+        boolean fireCounterRun = this.fireCounter.run();
+        if(KeyEventPress.isFirePress && fireCounterRun) {
 //        if(KeyEventPress.isFirePress) {
             this.fire();
         }
@@ -75,9 +75,9 @@ public class Player extends GameObject implements Physics {
         PlayerBullet bullet2 = GameObject.recycle(PlayerBullet.class);
         PlayerBullet bullet3 = GameObject.recycle(PlayerBullet.class);
 
-        bullet1.velocity.set(0, -1);
-        bullet2.velocity.set(-1, -1);
-        bullet3.velocity.set(1, -1);
+        bullet1.velocity.set(0, -3);
+        bullet2.velocity.set(-1, -3);
+        bullet3.velocity.set(1, -3);
 
         bullet1.position.set(this.position.x, this.position.y);
         bullet2.position.set(this.position.x, this.position.y);

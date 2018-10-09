@@ -2,6 +2,7 @@ package game;
 
 import base.*;
 import base.enemy.Enemy;
+import base.enemy.EnemySummoner;
 import base.player.Player;
 //import tklibs.SpriteUtils;
 
@@ -19,8 +20,9 @@ public class GameCanvas extends JPanel {
         //Khởi tạo các game object
         this.background = GameObject.recycle(BackGround.class);
         this.player = GameObject.recycle(Player.class);
+        EnemySummoner enemySummoner = GameObject.recycle(EnemySummoner.class);
 //        enemies = new ArrayList<>();
-        Enemy enemy = GameObject.recycle(Enemy.class);
+//        Enemy enemy = GameObject.recycle(Enemy.class);
 //        playerBullets = new ArrayList<>();
     }
 
