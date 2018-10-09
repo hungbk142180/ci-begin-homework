@@ -90,10 +90,10 @@ public class Enemy extends GameObject implements Physics {
 
     public void move() {
         boolean moveCounterRun = moveCounter.run();
-        if(moveCounterRun == false) {
-            this.position.addThis(-5, 0);
-        } else {
+        if(moveCounterRun) {
             this.position.addThis(5, 0);
+        } else {
+            this.position.addThis(-5, 0);
         }
         if (this.position.x >= 358) {
             this.moveCounter.reset();
